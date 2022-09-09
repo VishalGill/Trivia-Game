@@ -26,3 +26,4 @@
 //step 3: if correct, showcase green and then can proceed to next question, if wrong, showcase red and proceed to next question.
 //step 3B: display -> Q#/totalQ# *Stretch Goal*
 //step 4: Once all the questions are answered, display score and state the quiz is over.
+
