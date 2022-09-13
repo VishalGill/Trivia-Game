@@ -1,6 +1,6 @@
 body {
     display: flex;
-    background-color: black;
+    background-color: blue;
 
 }
 
@@ -25,15 +25,18 @@ body {
     background-color: white;
     justify-content: center;
     height: 150px;
+    /* visibility: hidden; */
     
 }
 
-.answer-container {
+#answers {
     display: flex;
-    background-color:White;
+    background-color:white;
     justify-content: center;
     flex-wrap: wrap;
     padding: 40px;
+    /* visibility: hidden; */
+    
 }
 .answer-btn {
     width: 40%;
@@ -41,7 +44,14 @@ body {
 
 }
 
-.footer, .top-layer {
+.top-layer {
     display: flex;
     justify-content: space-between;
+    
 } 
+
+#next {
+    display: flex;
+    justify-content: center;
+    /* visibility: hidden;
+} */
