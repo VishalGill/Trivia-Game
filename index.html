@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Trivia Game</title>
+		<script defer src="p1.js"></script>
+		<link rel="stylesheet" href="p1.css" />
+	</head>
+
+	<body>
+		<!-- Create Container, create top layer (player name, score), question div, answers div, create footer (Next, Restart, Exit Button)-->
+		<div class="container">
+			<!-- <div class="top-layer">
+				<p>player name <span class="player-name"></span></p> 
+				<p>score <span class="score"></span></p>
+			</div>   -->
+			<div class="question-container" id="question">Question</div>
+			<div class="answer-container" id="answers">
+				<button class="button" id="ans1">Answer 1</button>
+				<button class="button" id="ans2">Answer 2</button>
+				<button class="button" id="ans3">Answer 3</button>
+				<button class="button" id="ans4">Answer 4</button>
+			</div>
+			<div class="footer">
+				<button class="next-btn" id="next">Next</button>
+                <p>Score  <div id="score-number">0</div></p>
+				<!-- <button class="restart-btn">Restart</button>
+				<button class="exit-btn">Exit</button> -->
+			</div>
+		</div>
+		<!-- <div>
+			<p>Welcome to Trivia Game</p>
+			<input type="text" value="Enter Your Name" />
+			<p>Rules:</p>
+			<ol>
+				<li>Enter your name to begin</li>
+				<li>Hit next to go to the next question</li>
+				<li>Hit restart to start from the beginning</li>
+				<li>Hit exit if you want to leave the game</li>
+			</ol> 
+		</div>   -->
+	</body>
+</html>
