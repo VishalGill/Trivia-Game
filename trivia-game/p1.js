@@ -22,6 +22,7 @@
 // let questionContainer = document.getElementById('container');
 let nextButton = document.getElementById('next');
 let question = document.getElementById('question');
+let answersAll = document.querySelectorAll('.button');
 let ans1 = document.getElementById('ans1');
 let ans2 = document.getElementById('ans2');
 let ans3 = document.getElementById('ans3');
@@ -32,27 +33,27 @@ let questions = [
 	{
 		q: 'How many coding languages are there?',
 		options: ['Over 700', '227', 'around 350', '67'],
-		answer: 0,
+		answer: 'ans1',
 	},
 	{
 		q: 'what was the first coding language?',
-		options: ['PHP', 'FORTRAN', 'RUBY ON RAILS', 'PYTHON'],
-		answer: 1,
+		options: ['FORTRAN', 'JS', 'RUBY ON RAILS', 'PYTHON'],
+		answer: 'ans1',
 	},
 	{
 		q: "According to Stack Overflow's 2020 developer survey, what is the most used programming language in the world?",
 		options: ['JavaScript', 'Python', 'HTML/CSS', 'Java'],
-		answer: 0,
+		answer: 'ans1',
 	},
 	{
 		q: 'Which programming language is used to style your webpage?',
-		options: ['Python', 'HTML', 'CSS', 'React'],
-		answer: 2,
+		options: ['CSS', 'HTML', 'Python', 'React'],
+		answer: 'ans1',
 	},
 	{
 		q: 'What was the first-ever computer game?',
 		options: ['Spacewar', 'Tetris', 'Snake', 'PacMan'],
-		answer: 1,
+		answer: 'ans1',
 	},
 ];
 
@@ -100,22 +101,55 @@ grab brick @ array[0]
 set to null
 replace it with brick 1
 */
-let index = 0;
-nextButton.addEventListener('click', () => {
-	console.log(index);
-	
 
+let index = 0;
+alert('start game');
+const load = () => {
 	if (index == 5) {
+		alert('Game Over');
 		index = 0;
 	}
-	
+	console.log('load');
+	//set colors back to original color by doing a for loop of the array of answersAll
+	for (let i = 0; i < answersAll.length; i++) {
+		answersAll[i].style.background = 'lightgray';
+	}
+	question.innerText = questions[index].q;
+	ans1.innerText = questions[index].options[0];
+	ans2.innerText = questions[index].options[1];
+	ans3.innerText = questions[index].options[2];
+	ans4.innerText = questions[index].options[3];
+	index++;
+};
 
-    question.innerText = questions[index].q;
-		ans1.innerText = questions[index].options[0];
-		ans2.innerText = questions[index].options[1];
-		ans3.innerText = questions[index].options[2];
-		ans4.innerText = questions[index].options[3];
-        index++;
-});
+nextButton.addEventListener('click', load);
 
-console.log(index);
+load();
+
+// const selection
+// question[index-1].event.target.id
+
+// question[index].answer
+let score = document.querySelector('#score-number').innerText;
+console.log(score);
+let correctAnswer = (e) => {
+	if (questions[index - 1].answer === e.target.id) {
+		e.target.style.backgroundColor = 'green';
+		score = parseInt(score);
+		score += 1;
+		console.log(score);
+		document.querySelector('#score-number').innerText = score;
+		//revision add intervals
+		// console.log(e.target.style.backgroundColor);
+	} else {
+		e.target.style.backgroundColor = 'red';
+		// console.log('two');
+	}
+
+	console.log(questions[index - 1].answer);
+	console.log(e.target.id);
+};
+
+for (let i = 0; i < answersAll.length; i++) {
+	answersAll[i].addEventListener('click', correctAnswer);
+}

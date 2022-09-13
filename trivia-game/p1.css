@@ -35,7 +35,7 @@ body {
 .answer-container {
     display: flex;
     background-color:rgb(210, 218, 255);
-    border-color: rgb(238, 241, 255);
+    border-color: rgb(210, 218, 255);
     justify-content: center;
     flex-wrap: wrap;
     padding: 40px;
@@ -46,11 +46,13 @@ body {
 }
 .button {
     display: flex;
-    background-color: rgb(238, 241, 255);
-    border-color: rgb(238, 241, 255);
+    background-color: lightgray;
+    border-color: lightgray;
     border-radius: 10px;
     justify-content: center;
     flex-wrap: wrap;
+    font-size: 15px;
+    align-items: center;
     margin: auto;
     padding: 40px;
     width: 39%;
