@@ -1,6 +1,6 @@
 body {
     display: flex;
-    background-color: blue;
+    background-color: rgb(177, 178, 255);
 
 }
 
@@ -8,9 +8,10 @@ body {
     display: flex;
     flex-direction: column;
     margin:auto;
-    background-color: white;
+    background-color: B1B2FF;
     width: 600px;
     height: 400px;
+    border-radius: 20px;
    
     
 }
@@ -22,25 +23,38 @@ body {
 
 .question-container {
     display: flex;
-    background-color: white;
+    background-color: rgb(170, 196, 255);
     justify-content: center;
     height: 150px;
+    padding-top: 50px;
+    border-radius: 5px 5px 0px 0px;
     /* visibility: hidden; */
     
 }
 
-#answers {
+.answer-container {
     display: flex;
-    background-color:white;
+    background-color:rgb(210, 218, 255);
+    border-color: rgb(238, 241, 255);
     justify-content: center;
     flex-wrap: wrap;
     padding: 40px;
     /* visibility: hidden; */
+    border-radius: 5px  5px 5px 5px;
+
     
 }
-.answer-btn {
-    width: 40%;
-    height: 40px;
+.button {
+    display: flex;
+    background-color: rgb(238, 241, 255);
+    border-color: rgb(238, 241, 255);
+    border-radius: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+    padding: 40px;
+    width: 39%;
+    height: 39px;
 
 }
 
@@ -53,5 +67,8 @@ body {
 #next {
     display: flex;
     justify-content: center;
-    /* visibility: hidden;
-} */
+    background-color: rgb(238, 241, 255);
+    border-radius: 5px 5px 5px 5px;
+    border-color: rgb(238, 241, 255);
+    
+}

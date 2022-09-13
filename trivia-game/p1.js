@@ -30,28 +30,28 @@ let ans4 = document.getElementById('ans4');
 // Questions/Answers DO ARRAYS
 let questions = [
 	{
-		q: 'question 1?',
-		options: ['question 1', 'GA2', 'GA3', 'GA4'],
+		q: 'How many coding languages are there?',
+		options: ['Over 700', '227', 'around 350', '67'],
+		answer: 0,
+	},
+	{
+		q: 'what was the first coding language?',
+		options: ['PHP', 'FORTRAN', 'RUBY ON RAILS', 'PYTHON'],
 		answer: 1,
 	},
 	{
-		q: 'Question 2?',
-		options: ['ex 2', 'Q 2', 'Q 3', 'Q 3'],
-		answer: 1,
+		q: "According to Stack Overflow's 2020 developer survey, what is the most used programming language in the world?",
+		options: ['JavaScript', 'Python', 'HTML/CSS', 'Java'],
+		answer: 0,
 	},
 	{
-		q: 'question 3?',
-		options: ['ex 3', 'GA2', 'GA3', 'GA4'],
-		answer: 1,
+		q: 'Which programming language is used to style your webpage?',
+		options: ['Python', 'HTML', 'CSS', 'React'],
+		answer: 2,
 	},
 	{
-		q: 'question 4?',
-		options: ['ex 4', 'GA2', 'GA3', 'GA4'],
-		answer: 1,
-	},
-	{
-		q: 'question 5?',
-		options: ['ex 5', 'GA2', 'GA3', 'GA4'],
+		q: 'What was the first-ever computer game?',
+		options: ['Spacewar', 'Tetris', 'Snake', 'PacMan'],
 		answer: 1,
 	},
 ];
@@ -91,7 +91,7 @@ let questions = [
 //if statement if this text = this text then style.background = green else style.background = red
 
 //ans1.style.background-color= green
-//ans1.style.background-color= green
+//ans1.style.background-color= red
 //grabbing the variable saved to ans 1 accessing style property - setting it to green if correct.
 
 //render function
@@ -117,7 +117,5 @@ nextButton.addEventListener('click', () => {
 		ans4.innerText = questions[index].options[3];
         index++;
 });
-
-
 
 console.log(index);
